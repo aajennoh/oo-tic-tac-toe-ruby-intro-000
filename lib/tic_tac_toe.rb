@@ -119,7 +119,7 @@ def full?
 end
 
 def draw?
-  if !won?(@board) && full?(@board)
+  if !won? && full?
     return true
   else
     return false
@@ -148,13 +148,13 @@ def winner
 end
 
 def play
-  until over?(@board) == true
+  until over? == true
     turn
   end
 
-  if won?(@board)
+  if won?
     puts "Congratulations #{winner(@board)}!"
-  elsif draw?(@board)
+  elsif draw?
     puts "Cat's Game!"
   end
 end

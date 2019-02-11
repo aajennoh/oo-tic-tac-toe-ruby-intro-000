@@ -56,16 +56,16 @@ end
 #  index.between?(0,8) && !position_taken?(board, index)
 #end
 
-def turn(board)
+def turn
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
-  if valid_move?(board, index)
-    player_character = current_player(board)
-    move(board, index, player_character)
-    display_board(board)
+  if valid_move?(index)
+    player_character = current_player
+    move(index, character)
+    display_board
   else
-    turn(board)
+    turn
   end
 end
 

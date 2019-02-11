@@ -135,7 +135,7 @@ def over?
 end
 
 def winner
-  win_position = won?(@board)
+  win_position = won?
   if win_position == false
     return nil
   else

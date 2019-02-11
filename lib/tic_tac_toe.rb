@@ -95,7 +95,7 @@ end
 #your_turn = turn % 2 == 0 ? "X" : "O"
 #  end
 
-def won?(board)
+def won?
   WIN_COMBINATIONS.each do |win_combination|
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
@@ -114,11 +114,11 @@ def won?(board)
   return false
 end
 
-def full?(@board)
+def full?
   @board.all? {|index| index == "X" || index == "O"}
 end
 
-def draw?(board)
+def draw?
   if !won?(@board) && full?(@board)
     return true
   else
@@ -126,7 +126,7 @@ def draw?(board)
   end
 end
 
-def over?(board)
+def over?
   if draw?(board) || won?(board)
     return true
   else
@@ -134,7 +134,7 @@ def over?(board)
   end
 end
 
-def winner(board)
+def winner
   win_position = won?(@board)
   if win_position == false
     return nil

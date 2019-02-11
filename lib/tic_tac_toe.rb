@@ -119,7 +119,7 @@ def full?(board)
 end
 
 def draw?(board)
-  if !won?(board) && full?(board)
+  if !won?(@board) && full?(@board)
     return true
   else
     return false
@@ -148,8 +148,8 @@ def winner(board)
 end
 
 def play
-  until over?(board) == true
-    turn(board)
+  until over?(@board) == true
+    turn
   end
 
   if won?(board)

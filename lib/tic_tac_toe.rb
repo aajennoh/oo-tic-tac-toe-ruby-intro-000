@@ -44,8 +44,8 @@ end
 #  board[location] != " " && board[location] != ""
 #end
 
-def valid_move?(board, index)
-  if (index.between?(0,8) == true) && (position_taken?(board, index) == false)
+def valid_move?(index)
+  if (index.between?(0,8) == true) && (position_taken?(index) == false)
     true
   else
     false

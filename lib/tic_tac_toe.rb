@@ -3,6 +3,7 @@ class TicTacToe
     @board = Array.new(9, " ")
   end
 
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 WIN_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
